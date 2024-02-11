@@ -1,0 +1,105 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#cy {
+    background-color: white;
+    color: white;
+}
+
+.top-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.top-container #cy {
+    overflow-x: visible;
+    width: 100%;
+    height: 100%;
+}
+
+.side-bar {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    flex-shrink: 0.3;
+    border-right: 2px solid darkgray;
+    box-shadow: inset 0px 0px 15px 1px darkgray;
+}
+
+.actor-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.actor-li {
+    margin: 7px 0px;
+}
+
+.actor-button {
+    text-align: center;
+    border: none;
+    border-radius: 10%;
+    height: 5rem;
+    width: 100%;
+    margin-top: 3rem;
+    transition: font-size 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.actor-form {
+    width: 80%;
+}
+
+.actor-input {
+    width: 100%;
+}
+
+.actor-button:hover {
+    font-size: 19px;
+}
+
+.actor-button.button-animation {
+    animation: button-rotator 0.6s ease-in-out;
+}
+
+.side-bar .clear {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    bottom: 3rem;
+    cursor: pointer;
+}
+
+@keyframes button-rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

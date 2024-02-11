@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="https://unpkg.com/neo4j-driver"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.20.1/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/layout-base/layout-base.js"></script>
+    <script src="https://unpkg.com/cose-base/cose-base.js"></script>
+    <script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+    <script src="https://unpkg.com/cytoscape-context-menus/cytoscape-context-menus.js"></script>
+    <script src="scripts/index.js" defer></script>
+    <title>Hollywood Grapher</title>
+</head>
+<body>
+    <div class="top-container">
+        <aside class="side-bar">
+            <form action="" class="actor-form" id="actor-form">
+                <ul class="actor-list">
+                    <li class="actor-li">
+                        <label for="name">Actor's Name:</label>
+                        <input type="text" name="actor-name" id="name" class="actor-input" value="Tom Hanks">
+                    </li >
+                    <li class="actor-li">
+                        <label for="quantity">Actor Number:</label>
+                        <input type="number" name="actor-number" id="number" class="actor-input" value="0">
+                    </li>
+                    <li>
+                        <button class="actor-button" id="submit-form">
+                            <span>Add Actor</span>
+                        </button>
+                    </li>
+                </ul>
+            </form>
+            <button class="clear" id="clear-button"><img src="assets/trash.png" alt="Trash Image"></button>
+        </aside>
+        <div id="cy"></div>
+    </div>
+</body>
+</html>
